@@ -1,0 +1,26 @@
+﻿@page "{tableType=BubaTable}"
+@model MyApp.Namespace.TableModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewCategory</title>
+</head>
+<body>
+    @* <h2>@Page()</h2> *@
+    @if (Model.Items.Any())
+    {
+        <ul>
+            @foreach(var item in Model.Items)
+            {
+                <li>@item.Name</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No tables found</p>
+    }
+</body>
+</html>
